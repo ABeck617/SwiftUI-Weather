@@ -15,11 +15,23 @@ struct ContentView: View {
                             endPoint: .bottomTrailing)
                 .edgesIgnoringSafeArea(.all)
             
-            VStack {
+            VStack(spacing: 8) {
                 Text("Cupertino, CA")
                     .font(.system(size: 32, weight: .medium, design: .default))
                     .foregroundColor(.white)
                     .padding()
+                
+                VStack {
+                    Image(systemName: "cloud.sun.fill")
+                        .renderingMode(.original)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 180, height: 180)
+                    
+                    Text("76°")
+                        .font(.system(size: 70, weight: .medium))
+                        .foregroundColor(.white)
+                }
                 Spacer()
             }
             
